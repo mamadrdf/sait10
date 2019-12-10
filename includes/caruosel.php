@@ -9,6 +9,7 @@
 
 
           <div class="carousel-item">
+            <div class="mask"></div>
             <img src="./assets/img/2.jpg" width="100%" height="100%" >
             <div class="container">
               <div class="carousel-caption text-left background">
@@ -21,9 +22,11 @@
 
           
           <div class="carousel-item active">
+                        <div class="mask"></div>
+
             <img src="./assets/img/3.jpg" width="100%" height="100%" >
             <div class="container">
-              <div class="carousel-caption text-left background">
+              <div class="carousel-caption text-left background" style="z-index:2">
                 <h1>عنوان پست 1</h1>
                 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در ش</p>
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">مشاهده بیشتر</a></p>
@@ -33,6 +36,8 @@
 
 
           <div class="carousel-item">
+                        <div class="mask"></div>
+
             <img src="./assets/img/5.jpg" width="100%" height="100%" >
             <div class="container">
               <div class="carousel-caption text-left background">

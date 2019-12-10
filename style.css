@@ -10,3 +10,11 @@
     src: url('./assets/fonts/Shabnam-FD.ttf');
     font-family: shabnam;
 }
+body{
+    background: #f5f5f5 !important;
+}
+.comment{
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
