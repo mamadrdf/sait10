@@ -5,44 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>صفحه اصلی</title>
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" >
-<link rel="stylesheet" href="./style.css">
+    <link href="./assets/css/carousel.css" rel="stylesheet" >
+    <link rel="stylesheet" href="./style.css">  
+    <style>
+    .background{
+      background: #000000cc;
+      padding: 10px 20px;
+      border-radius:5px;
+      font-size:12px !important;
+    }
+    .carousel-caption p, .carousel-caption p a{
+      font-size:14px !important;
+      font-weight:200;
+      line-height:29px;
+    }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="/blog">صفحه اصلی</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">درباره ما</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">تماس با ما</a>
-      </li>
-      
-     
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <a class="btn btn-success my-2 my-sm-0" href="/blog/auth/?p=login" >ورود</a>
-      <a class="btn btn-primary my-2 my-sm-0 ml-1" href="/blog/auth/?p=register" >عضویت</a>
-    </form>
-  </div>
-</nav>
+<!--  navbar -->
+<?php include './includes/navbar.php' ?>
 
 <main role="main">
-
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-3">Hello, world!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-    </div>
-  </div>
+    <!-- carousel -->
+    <?php  include './includes/caruosel.php'; ?>
 
   <div class="container">
     <!-- Example row of columns -->
@@ -71,8 +57,9 @@
 </main>
 
 <footer class="container">
-  <p>© Company 2017-2019</p>
+  <p>©  2017-2019</p>
 </footer>
-
+<script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
 </body>
 </html>
