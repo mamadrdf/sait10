@@ -1,4 +1,4 @@
-<form class="form-auth" action='/login-auth.php' method="post">
+<form class="form-auth" action='' method="post">
     <img class="mb-4" src="../assets/img/enter.svg" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">ورود به وبسایت</h1>
     <input type="email" id="inputEmail" class="form-control"  name="email" placeholder="آدرس ایمیل" required autofocus>
