@@ -14,6 +14,7 @@ class User{
         $res=mysqli_fetch_assoc($row);
         if($res!=null){
                 if($res['password']==$password){
+                    $_SESSION['id']=$res['id'];
                     if($res['role']=="admin"){
                         $_SESSION['admin']=$username;
                         header("Location: http://localhost/blog/admin/");

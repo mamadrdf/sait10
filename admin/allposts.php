@@ -1,3 +1,10 @@
+<?php
+    include_once './../classes/Post.php';
+    $post=new Post();
+    if(isset($_POST['delete'])){
+        $post->deletePost($_POST['id']);
+    }
+?>
 <div class="d-flex justify-content-between align-items-center mb-3 border-bottom-1">
     <h2>همه مطالب</h2>
     
@@ -7,64 +14,33 @@
         <thead>
         <tr>
             <th>عنوان دوره </th>
-            <th>تعداد نظرات</th>
-            <th>مقدار بازدید</th>
-            <th>تعد شرکت کننده ها</th>
+            <th>متن نوشته</th>
+            <th>تاریخ ایجاد</th>
             <th>تنظیمات</th>
         </tr>
         </thead>
         <tbody>
-                    <tr>
-                        <td><a href="/courses/<%=item.slug %>">عنوان 1</a></td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>
-                           0
-                        </td>
-                        <td>
-                            <form action="/admin/courses/<%=item._id %>?_method=DELETE" method="post">
+        <?php $posts=$post->index(); for ($i=0;$i<sizeof($posts);$i++){?>
 
-                                <div class="btn-group btn-group-sm">
-                                    <a href="/admin/courses/<%=item._id %>/edit"  class="btn btn-primary">ویرایش</a>
-                                    <button type="submit" class="btn btn-danger">حذف</button>
-                                </div>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="/courses/<%=item.slug %>">عنوان 1</a></td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>
-                           0
-                        </td>
-                        <td>
-                            <form action="/admin/courses/<%=item._id %>?_method=DELETE" method="post">
+            <tr>
+                <td><a href="/blog/post/?id=<?php echo $posts[$i]['id']; ?>"> <?php echo $posts[$i]['title']; ?> </a></td>
+                <td><?php echo $posts[$i]['body']; ?></td>
+                <td><?php echo $posts[$i]['createdAt']; ?></td>
 
-                                <div class="btn-group btn-group-sm">
-                                    <a href="/admin/courses/<%=item._id %>/edit"  class="btn btn-primary">ویرایش</a>
-                                    <button type="submit" class="btn btn-danger">حذف</button>
-                                </div>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="/courses/<%=item.slug %>">عنوان 1</a></td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>
-                           0
-                        </td>
-                        <td>
-                            <form action="/admin/courses/<%=item._id %>?_method=DELETE" method="post">
+                <td>
+                    <form action="" method="post">
 
-                                <div class="btn-group btn-group-sm">
-                                    <a href="/admin/courses/<%=item._id %>/edit"  class="btn btn-primary">ویرایش</a>
-                                    <button type="submit" class="btn btn-danger">حذف</button>
-                                </div>
-                            </form>
-                        </td>
-                    </tr>
+                        <div class="btn-group btn-group-sm">
+                            <a href="#"  class="btn btn-primary">ویرایش</a>
+                            <input type="hidden" value="<?php echo $posts[$i]['id']; ?>" name="id">
+                            <input type="submit" class="btn btn-danger" value="حذف" name="delete">
+                        </div>
+                    </form>
+                </td>
+            </tr>
+
+        <?php } ?>
+
               
         </tbody>
     </table>

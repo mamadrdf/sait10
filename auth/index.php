@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="fa">
   <head>
@@ -52,7 +55,7 @@
 
 
         <div class="text-center">
-        <?php 
+        <?php
           if(isset($_GET['p'])){
             if( $_GET['p']=='login'){
               include './login.php';

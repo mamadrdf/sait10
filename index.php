@@ -34,6 +34,7 @@ session_start();
     </style>
 </head>
 <body>
+<div class="container">
 
 <!--  navbar -->
 <?php include './includes/navbar.php' ?>
@@ -42,7 +43,6 @@ session_start();
     <!-- carousel -->
     <?php  include './includes/caruosel.php'; ?>
 
-  <div class="container">
     <!-- Example row of columns -->
   <?php include './includes/cardItem.php' ?>
 
