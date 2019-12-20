@@ -58,6 +58,8 @@
               include './login.php';
             }else if($_GET['p']=='register'){
               include './register.php';
+            }else if($_GET['p']=='logout'){
+              include './logout.php';
             }
             else echo 'صفحه مورد نظر یافت نشد';
 
