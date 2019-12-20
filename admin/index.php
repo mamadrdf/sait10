@@ -39,7 +39,7 @@ if( ! isset($_SESSION['admin'])){
                 }else if($_GET['p']=='allposts'){
                   include './allposts.php';
                 }else if($_GET['p']=='comments'){
-                  include './comment.php';
+                  include './allComments.php';
                 }
               }else include './allposts.php';
         ?>
@@ -70,7 +70,7 @@ if( ! isset($_SESSION['admin'])){
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/blog/admin/?p=comments">
                   <span data-feather="layers"></span>
                   نظرات
                 </a>
